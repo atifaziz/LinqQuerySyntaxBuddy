@@ -21,7 +21,7 @@ namespace LinqQuerySyntaxBuddy
     using System.Linq;
     using Collections;
 
-    public static class Enumerable
+    public static partial class Enumerable
     {
         public static BinaryList<T> Seq<T>(T item) => new BinaryList<T>(item);
 
@@ -79,7 +79,7 @@ namespace LinqQuerySyntaxBuddy.Collections
     /// one <typeparamref name="T"/>.
     /// </summary>
 
-    public readonly struct BinaryList<T> : IList<T>, IReadOnlyList<T>
+    public readonly partial struct BinaryList<T> : IList<T>, IReadOnlyList<T>
     {
         public static BinaryList<T> Empty = new BinaryList<T>();
 
